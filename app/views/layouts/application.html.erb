@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Bloodrelative</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+		<meta name="keywords" content="Blood Relative, Thalassemia, Major, Minor, Blood, India, Genetic, Nimisha, Mukerji, Mark, Ratzlaff" >
+	<meta name="description" content="Blood Relative: Mumbai's Forgotten Children is a cinéma vérité documentary that journeys into the heart of India, the city of Mumbai, and chronicles one man's fight to change government policy and get free medical treatment to children dying of Thalassemia Major.">
+		<title><%= @title %></title>
+		<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+      <![endif]-->
+      <%= stylesheet_link_tag    "application", :media => "all" %>
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript">
 
-<%= yield %>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21957789-1']);
+  _gaq.push(['_setDomainName', '.bloodrelative.net']);
+  _gaq.push(['_trackPageview']);
 
-</body>
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</head>
+
+  <body>
+    <%= render 'layouts/nav_bar'%>
+		<div class="container">
+		  
+		  
+		  <%= image_tag "title.png", :class=>"header"%>
+		  </div>
+		  <div class="holder">
+		    <div class="round main">
+          <% flash.each do |key, value| %>
+      		  <%= content_tag(:div, value, :class => "flash #{key}") %>
+      		<% end %>
+			  	<%= yield %>
+			  </div>
+			  <div class="round sidebar">
+				  <%= render 'layouts/sidebar' %>
+			  </div>
+			</div>
+			<div style="clear:both;">
+		</div>
+	</body>
 </html>
+

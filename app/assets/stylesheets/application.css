@@ -11,3 +11,47 @@
  *= require_self
  *= require_tree .
 */
+
+.holder{
+  margin: 0 auto 0 auto;
+  width: 940px;
+}
+.sidebar{
+  width:300px;float:left; 
+}
+.main {
+  width:600px;float:left; margin-right: 2px;" 
+}
+.round {
+	background:white;
+	/*-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 8px;*/
+	padding: 8px;
+	
+}
+
+iframe{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.heading {
+position:relative; z-index:0; height:43px; background-image:url(/assets/bar.png); background-repeat:no-repeat;
+font-size: 20px;
+color:white;
+margin-left:-20px;
+padding-left:10px;
+padding-top:10px;
+margin-top:10px;
+margin-bottom:10px;
+}
+
+img {
+  margin-left: 20px;
+}
+img.header{
+  margin-left:0px;
+  margin-bottom:20px;
+}
